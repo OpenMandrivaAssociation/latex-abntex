@@ -1,6 +1,6 @@
 %define texdir /usr/share/texmf
-Summary: LaTeX macros for writing documents following the ABNT norms.
-Summary(pt_BR): Macros para LaTeX que implementam normas da ABNT.
+Summary: LaTeX macros for writing documents following the ABNT norms
+Summary(pt_BR): Macros para LaTeX que implementam normas da ABNT
 Name: latex-abntex
 Version: 0.9
 Release: %mkrel -c beta1 1
