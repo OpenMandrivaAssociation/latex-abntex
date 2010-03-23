@@ -11,7 +11,7 @@ Source: abntex-%{version}-beta2.tar.gz
 Patch0: abntex-0.9-respect-prefix.patch
 Requires: tetex
 BuildArch: noarch
-BuildRequires: tetex
+BuildRequires: tetex tetex-latex tetex-dvips
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
 %description
