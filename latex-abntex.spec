@@ -3,15 +3,17 @@ Summary: LaTeX macros for writing documents following the ABNT norms
 Summary(pt_BR): Macros para LaTeX que implementam normas da ABNT
 Name: latex-abntex
 Version: 0.9
-Release: %mkrel -c beta1 1
+Release: %mkrel -c beta2 1
 License: LPPL
 Group: Publishing
 URL: http://abntex.codigolivre.org.br
-Source: abntex-%{version}-beta.tar.gz
+Source: abntex-%{version}-beta2.tar.gz
 Patch0: abntex-0.9-respect-prefix.patch
 Requires: tetex
+BuildArch: noarch
 BuildRequires: tetex
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
+
 %description
 With the abnTeX macros you will be able to write LaTeX
 documents which conform to several norms from ABNT
@@ -34,12 +36,13 @@ rm -rf $RPM_BUILD_DIR/%{name}-%{version}
 %patch0 -p1 -b .respect-prefix
 
 %build
-:
+make doc-ps
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -m 755 -d $RPM_BUILD_ROOT/%_datadir/texmf/
 install -m 755 -d $RPM_BUILD_ROOT/%_bindir
+install -m 755 -d $RPM_BUILD_ROOT/%_docdir
 make install DESTDIR=$RPM_BUILD_ROOT USRLOCAL=$RPM_BUILD_ROOT/usr/bin
 
 %post
@@ -51,6 +54,7 @@ texhash
 %files
 %defattr(-, root, root)
 %doc LEIAME LEIAME.linux LEIAME.make LEIAME.administracao
+%doc compiled.docs/*.ps.gz
 %{texdir}/bibtex/bib/abntex
 %{texdir}/bibtex/bst/abntex
 %{texdir}/doc/bibtex/abntex
