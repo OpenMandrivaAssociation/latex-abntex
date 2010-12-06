@@ -3,7 +3,7 @@ Summary: LaTeX macros for writing documents following the ABNT norms
 Summary(pt_BR): Macros para LaTeX que implementam normas da ABNT
 Name: latex-abntex
 Version: 0.9
-Release: %mkrel -c beta2 1
+Release: %mkrel -c beta2 2
 License: LPPL
 Group: Publishing
 URL: http://abntex.codigolivre.org.br
