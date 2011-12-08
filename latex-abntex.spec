@@ -31,7 +31,7 @@ e símbolos e um estilo para escrever requerimentos de patentes
 para o INPI. Você também pode usar esses estilos com LyX.
 
 %prep
-rm -rf $RPM_BUILD_DIR/%{name}-%{version}
+rm -rf %{_builddir}/%{name}-%{version}
 %setup -n abntex-%{version}
 %patch0 -p1 -b .respect-prefix
 
