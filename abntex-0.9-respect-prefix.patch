@@ -1,0 +1,12 @@
+diff -Nura abntex-0.9/Makefile abntex-0.9.changed/Makefile
+--- abntex-0.9/Makefile	2005-12-21 15:32:56.000000000 -0200
++++ abntex-0.9.changed/Makefile	2006-07-03 16:42:46.000000000 -0300
+@@ -7,7 +7,7 @@
+ #altere a linha abaixo se o seu tetex não puder se detetado
+ #pelo comando kpsewich, na dúvida faça um "make test"
+ #TEXDIR= /tmp/test
+-export TEXDIR= ${shell kpsewhich --expand-path='$$TEXMFMAIN'}
++export TEXDIR= ${DESTDIR}${shell kpsewhich --expand-path='$$TEXMFMAIN'}
+ 
+ export USRLOCAL=/usr/local/bin
+ 
