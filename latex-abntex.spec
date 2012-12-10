@@ -31,7 +31,7 @@ e símbolos e um estilo para escrever requerimentos de patentes
 para o INPI. Você também pode usar esses estilos com LyX.
 
 %prep
-rm -rf %{_builddir}/%{name}-%{version}
+rm -rf $RPM_BUILD_DIR/%{name}-%{version}
 %setup -n abntex-%{version}
 %patch0 -p1 -b .respect-prefix
 
@@ -62,4 +62,40 @@ texhash
 %{texdir}/makeindex/abntex
 %{texdir}/tex/latex/abntex
 %{_bindir}/geratss
+
+
+
+%changelog
+* Mon Dec 06 2010 Oden Eriksson <oeriksson@mandriva.com> 0.9-0.beta2.2mdv2011.0
++ Revision: 612698
+- the mass rebuild of 2010.1 packages
+
+* Tue Mar 23 2010 Bogdano Arendartchuk <bogdano@mandriva.com> 0.9-0.beta2.1mdv2010.1
++ Revision: 526933
+- new version beta2
+- added ps docs in the package
+- make it noarch
+
+* Mon Mar 22 2010 Bogdano Arendartchuk <bogdano@mandriva.com> 0.9-0.beta1.1mdv2010.1
++ Revision: 526649
+- imported package latex-abntex
+
+
+* Mon Mar 22 2010 Bogdano Arendartchuk <bogdano@mandriva.com.br>
+- imported to Mandriva Linux
+
+* Mon Jul 3 2006 Bogdano Arendartchuk <bogdano@mandriva.com.br>
+Adapted spec file to Mandriva Linux.
+
+* Fri May 30 2003 Gerald Weber <gweber@codigolivre.org.br>
+Corrigido o bug 137.
+
+* Tue Mar 19 2003 Gerald Weber <gweber@codigolivre.org.br>
+Adicionado o pacote lyx.
+
+* Tue Nov 27 2002 Gerald Weber <gweber@codigolivre.org.br>
+Correção de bug na classe abnt.cls.
+
+* Tue Nov 19 2002 Gerald Weber <gweber@codigolivre.org.br>
+First release as rpm package.
 
