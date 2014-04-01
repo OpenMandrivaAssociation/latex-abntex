@@ -9,10 +9,8 @@ Group:		Publishing
 Url:		http://abntex.codigolivre.org.br
 Source0:	abntex-%{version}-beta2.tar.gz
 Patch0:		abntex-0.9-respect-prefix.patch
-BuildRequires:	tetex
-BuildRequires:	tetex-dvips
-BuildRequires:	tetex-latex
-Requires:	tetex
+BuildRequires:	texlive-scheme-full
+Requires:	texlive-scheme-full
 BuildArch:	noarch
 
 %description
