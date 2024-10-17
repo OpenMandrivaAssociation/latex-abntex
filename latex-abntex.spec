@@ -6,7 +6,7 @@ Version:	0.9
 Release:	0.beta2.3
 License:	LPPL
 Group:		Publishing
-Url:		http://abntex.codigolivre.org.br
+Url:		https://abntex.codigolivre.org.br
 Source0:	abntex-%{version}-beta2.tar.gz
 Patch0:		abntex-0.9-respect-prefix.patch
 BuildRequires:	texlive-scheme-full
